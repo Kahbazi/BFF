@@ -32,13 +32,13 @@ namespace Duende.Bff
                 var endpoint = context.GetEndpoint();
                 if (endpoint == null)
                 {
-                    throw new InvalidOperationException("endoint not found");
+                    throw new InvalidOperationException("endpoint not found");
                 }
 
                 var metadata = endpoint.Metadata.GetMetadata<BffRemoteApiEndpointMetadata>();
                 if (metadata == null)
                 {
-                    throw new InvalidOperationException("API endoint is missing BFF metadata");
+                    throw new InvalidOperationException("API endpoint is missing BFF metadata");
                 }
 
                 string token = null;
